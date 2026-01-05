@@ -1,0 +1,389 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* utility variables */
+:root {
+    --energy-blue: #1C5186; 
+    --accent-blue: #2f7cf7; 
+    --card-background: #f0f0f0; 
+    --admin-bg-color: #f0f0f0; 
+    --main-content-bg: white;
+}
+
+body {
+    background-color: var(--admin-bg-color);
+}
+
+.dashboard-content {
+    max-width: 98%; 
+    width: 125%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--main-content-bg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 120px;
+}
+
+.admin-home header {
+    position: relative;
+    display: block; 
+    height: 100px; 
+    padding: 50px 20px 0 20px;
+    background:#1C5186;
+    color: #FFFFFF;
+    width: 100%;
+}
+
+.header-content {
+    max-width: 98%; 
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-link {
+    position: absolute;
+    top: 10px; 
+    left: 10px;
+}
+
+.logo {
+    height: 80px; 
+    width: auto;
+    padding: 5px; 
+    position: initial; 
+    z-index: 10;
+}
+
+/* Menu Icon (Hamburger) */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    font-size: 32px;
+    cursor: pointer;
+    user-select: none;
+    margin-right: 30px;
+    position: absolute;
+    right: 0%;
+    top: 20px;
+    color: white;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 75px; 
+    right: 20px;
+    width: 150px;
+    background: white;
+    border-radius: 5px;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 99;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 0;
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    text-align: center;
+    font-weight: 501;
+}
+
+.dropdown-menu a:hover {
+    background: #e0eefc;
+    border-radius: 5px;
+}
+
+#menu-toggle:checked ~ .dropdown-menu {
+    display: block;
+}
+
+h1 {
+    margin: 30px 0 20px 0;
+    font-weight: bold;
+    text-align: left;
+}
+
+.admin-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    height: 25%;
+    width: 70%;
+}
+
+.btn {
+    text-decoration: none;
+    font-family: Arial;
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    font-weight: bold;
+    display: flex; 
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.2s, border-color 0.2s; 
+    width: auto; 
+}
+
+.attach-news-button {
+    background-color: var(--energy-blue); 
+    color: white;
+    border: 1px solid var(--energy-blue); 
+}
+
+.attach-news-button:hover {
+    background-color: #143e68; 
+    border-color: #143e68;
+}
+
+.add-programs-button {
+    background-color: var(--energy-blue); 
+    color: white; 
+    border: 1px solid var(--energy-blue); 
+}
+
+.add-programs-button:hover {
+    background-color: #143e68; 
+    border-color: #143e68;
+    color: white;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #eee;
+    margin: 0 0 25px 0;
+}
+
+.program-title {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.hosts {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 8px;
+}
+
+.card-description {
+    flex-grow: 1; 
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.4;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    padding-right: 45px;
+}
+
+.card-actions {
+    display: flex;
+    gap: 10px;
+    color: #999; 
+    font-size: 1.1em;
+    padding-top: 5px; 
+}
+
+.card-actions span:hover {
+    color: var(--energy-blue); 
+    cursor: pointer;
+}
+
+.card-details-wrapper {
+    background-color: var(--card-background);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+    padding: 25px;
+ }
+
+.program-card-admin {
+    padding-bottom: 25px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1C5186;
+    padding: 25px;
+    text-align: right;
+    font-size: 16px;
+    color: white;
+    z-index: 1000; /* ensures it’s on top of other elements */
+}
+
+.news-image {
+    width: 280px;
+    height: 160px;
+    object-fit: cover;
+    padding: 0;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.news-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.published-date {
+    color: #555;
+    font-size: 0.9em;
+}
+
+.hosts a {
+    text-decoration: none;
+    color: #1C5186;
+}
+
+.news-card-grid h3 {
+    padding-bottom: 25px;
+    padding-top: 10px;
+    font-weight: 500;
+    color: #555;
+    margin-left: 10px;
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* responsive news cards */
+
+/* for mobile phones */
+@media only screen and (max-width: 620px) {
+  .dashboard-content, .admin-home header, .header-content, .logo, .admin-buttons, 
+  .program-card-admin, .card-details-wrapper, .menu-icon, .dropdown-menu, .attach-news-button,
+  .add-programs-button, .program-title, .news-image, .hosts, .card-description, .card-actions, footer {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+    .dashboard-content {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .card-details-wrapper {
+        flex-direction: column;
+        padding: 15px;
+        position: relative;
+    }
+
+    .card-header-news {
+        width: 100%;
+    }
+
+    .program-title {
+        font-size: 1.1rem;
+        display: block;
+        max-width: 70%;
+    }
+
+    .news-image {
+        width: 100% !important;
+        height: auto;
+        padding: 0;
+        margin-bottom: 15px;
+        order: 2;
+    }
+
+    .news-info {
+        width: 100%;
+        order: 3;
+    }
+
+    .card-description {
+        padding-bottom: 15px;
+        font-size: 0.85rem;
+    }
+
+    .card-actions-news {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        gap: 15px;
+    }
+
+    .admin-buttons {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        flex: 1;
+        justify-content: center;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .card-details-wrapper {
+        flex-direction: column !important;
+        gap: 4px !important;
+    }
+
+    .card-header-news {
+        width: 100%;
+    }
+
+    .program-title {
+        font-size: 1.1rem;
+        max-width: 100%;
+    }
+
+    .news-image {
+        width: 100% !important;
+        height: auto !important;
+        margin-top: -110px !important;
+    }
+
+    .news-info {
+        width: 100%;
+    }
+
+    .card-description {
+        padding-right: 0;
+        padding-bottom: 10px;
+    }
+
+    .card-header-news, .program-title {
+        margin-bottom: 4px !important;
+    }
+}
+
+.card-header-news {
+    flex: 0 0 150px;
+}
+
+.card-actions-news {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}

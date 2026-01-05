@@ -1,0 +1,391 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --energy-blue: #1C5186; 
+    --accent-blue: #2f7cf7; 
+    --card-background: #f0f0f0; 
+    --admin-bg-color: #f0f0f0; 
+    --main-content-bg: white;
+}
+
+body {
+    background-color: var(--admin-bg-color);
+}
+
+.dashboard-content {
+    max-width: 98%; 
+    width: 125%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--main-content-bg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 120px;
+}
+
+/* Header */
+.admin-home header, .admin-edit_programs header {
+    position: relative;
+    display: block; 
+    height: 100px; 
+    padding: 50px 20px 0 20px;
+    background:#1C5186;
+    color: #FFFFFF;
+    width: 100%;
+}
+
+.header-content {
+    max-width: 98%; 
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    position: absolute;
+    top: 10px; 
+    left: 10px;
+}
+
+.logo {
+    height: 80px; 
+    width: auto;
+    padding: 5px; 
+    position: initial; 
+    z-index: 10;
+}
+
+/* Menu Icon (Hamburger) */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    position: absolute;
+    right: 30px; 
+    top: 25px; 
+    font-size: 32px;
+    cursor: pointer;
+    user-select: none;
+    color: white;
+    z-index: 100;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 85px; 
+    right: 20px;
+    width: 150px;
+    background: white;
+    border-radius: 5px;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 99;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    text-align: center;
+    font-weight: 501;
+}
+
+.dropdown-menu a:hover {
+    background: #e0eefc;
+    border-radius: 5px;
+}
+
+#menu-toggle:checked ~ .dropdown-menu {
+    display: block;
+}
+
+h1 {
+    margin: 30px 0 20px 0;
+    font-weight: bold;
+    text-align: left;
+}
+
+.admin-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    height: 25%;
+    width: 70%;
+}
+
+.btn {
+    text-decoration: none;
+    font-family: Arial;
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    font-weight: bold;
+    display: flex; 
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.2s, border-color 0.2s; 
+    width: auto; 
+}
+
+.attach-news-button {
+    background-color: var(--energy-blue); 
+    color: white;
+    border: 1px solid var(--energy-blue); 
+}
+
+.attach-news-button:hover {
+    background-color: #143e68; 
+    border-color: #143e68;
+}
+
+.add-programs-button {
+    background-color: var(--energy-blue); 
+    color: white; 
+    border: 1px solid var(--energy-blue); 
+}
+
+.add-programs-button:hover {
+    background-color: #143e68; 
+    border-color: #143e68;
+    color: white;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #e6e5e5; 
+    margin: 0 0 25px 0; 
+}
+
+.form-container {
+    height: auto !important;
+    max-width: 1050px;
+    min-height: 530px;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #f0f0f0;
+}
+
+input[type="text"], textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    width: 100%; 
+}
+
+#news-link {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.filter-dropdown-btn {
+    background: #1C5186;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+    height: 30px;
+    width: 180px;
+    margin-left: 32%;
+    align-self: flex-end;
+    text-align: center;
+}
+
+.two-column-container {
+    display: flex; 
+    gap: 30px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.left-column, .right-column {
+    flex: 1; 
+    display: flex;
+    flex-direction: column; 
+}
+
+.right-column {
+    margin-top: 0;
+}
+
+.image-upload-container {
+    margin-top: 50px;
+    width: 500px;
+}
+
+#image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 320px; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #555;
+    flex-grow: 1; 
+}
+
+#description {
+    flex-grow: 1; 
+    resize: none;
+    height: 138px;
+    margin-bottom: 40px;
+}
+
+.add-button {
+    background-color: var(--energy-blue); 
+    color: white;
+    border: none;
+    width: 25%;
+    padding: 10px; 
+    border-radius: 5px; 
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-end;
+    text-align: center;
+    height: 44px; 
+    text-decoration: none;
+}
+
+.attach-news-card {
+    background-color: #ddd;
+    padding: 20px;
+    height: 520px;
+    width: 75%;
+    display: flex;
+    margin: auto;
+    margin-top: 2%;
+    border-radius: 10px;
+    border-color: #999;
+    gap: 15px; 
+    margin-bottom: 15px; 
+}
+
+.add-item2 {
+    padding: 20px;
+}
+
+.add-item2 input[type="text"], 
+.add-item2 select {
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 1em; 
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+    height: 44px; 
+    width: 500px;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.add-item2 textarea,
+.add-item2 select {
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 1em; 
+    box-sizing: border-box;
+    transition: border-color 0.2;
+    height: 44px;
+    width: 60%;
+    margin-top: 40px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1C5186;
+    padding: 25px;
+    text-align: right;
+    font-size: 16px;
+    color: white;
+    z-index: 1000; /* ensures it’s on top of other elements */
+}
+
+.categories-checkboxes {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.left-column input, 
+.right-column input, 
+.right-column textarea {
+    width: 100%;
+}
+
+.category-placeholder {
+    display: block;
+    font-size: 14px;
+    color: #757575;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    cursor: pointer;
+    white-space: nowrap;
+    color: rgb(171, 171, 171);
+}
+
+.category-item input {
+    margin-right: 8px;
+    width: auto !important;
+}
+
+#image_url {
+    height: 90px;
+}
+
+@media screen and (max-width: 768px) {
+    .two-column-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .add-button {
+        width: 100%;
+        align-self: center;
+        margin-top: 10px;
+        height: 44px; 
+    }
+    
+    .right-column {
+        width: 100%;
+    }
+}

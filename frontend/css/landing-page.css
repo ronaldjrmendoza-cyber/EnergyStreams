@@ -1,0 +1,187 @@
+html, body {
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", "Kantumruy Pro", sans-serif;
+    box-sizing: border-box;
+}
+
+body.landing-page {
+    background: linear-gradient(#1d4f8f, #d1d1d1);
+    background-attachment: fixed;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+.landing-page-header {
+    margin-top: 80px;
+}
+
+.header-logo-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-landing-page {
+    width: 100px;
+}
+
+.station-title {
+    color: white;
+    margin-top: 3px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.header-line {
+    width: 300px;
+    height: 1px;
+    background: rgba(255,255,255,0.4);
+    margin: 15px auto 50px auto;
+}
+
+.welcome-title {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 90px;
+    font-weight: 300;
+    padding-top: 15px;
+}
+
+.welcome-title span {
+    font-weight: 700;
+}
+
+.continue h1 {
+    font-weight: 400;
+    font-size: 22px;
+    color: #222;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); 
+}
+
+.button-row {
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+}
+
+.user-button,
+.admin-button {
+    width: 160px;
+    padding: 14px 0;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.user-button {
+    background: #e5e5e5;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.admin-button {
+    background: #1e4e8d;
+    color: white;
+    border: black;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.user-button:hover, .admin-button:hover {
+  transform: scale(1.02);
+}
+
+.admin-section {
+    padding: 0 40px 30px 40px;
+}
+
+.admin-section h1 {
+    margin-top: 30px;
+    margin-bottom: 35px;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+}
+
+.admin-form label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #222;
+    padding-top: 5px;
+}
+
+.admin-form input {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    font-size: 15px;
+    background: white;
+}
+
+.login-button {
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 50%;
+    background: #a3c2dc;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login {
+    text-align: center;
+}
+
+.forgot-password {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 13px;
+}
+
+#forgot-password, #request-access {
+    width: 20px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.request-access {
+    padding-top: 5px;
+    text-align: center;
+    font-size: 13px;
+}
+
+#forgot-password:hover, #request-access:hover {
+    font-weight: bold;
+}
+
+.continue {
+    margin: 0 auto;
+    width: 520px;
+    height: 240px; /* this is overriden using the JS file */
+    border-radius: 15px;
+    background: rgba(255,255,255,0.45);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    backdrop-filter: blur(6px);
+    padding-top: 30px;
+    transition: height 0.4s ease;
+    overflow: hidden;
+    margin-bottom: 80px;
+}

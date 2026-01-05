@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.logo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    height: 75px;
+    width: auto;
+    z-index: 10;
+}
+
+.header {
+    background: url("../images/header_photo.png") center/cover no-repeat;
+    height: auto;
+    min-height: 350px;
+    position: relative;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.50);
+}
+
+.header-overlay {
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.header-overlay h1 {
+    padding-top: 24px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    font-size: clamp(2rem, 6vw, 60px);
+}
+
+.header-overlay p {
+    padding-top: 35px;
+    padding-bottom: 15px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+.intro-news {
+    color: #FFEC40;
+    padding: 50px;
+}
+
+.break-box {
+    background-color: rgba(69, 78, 87, 1);
+    width: 100%;
+    height: auto;
+    min-height: 50px;
+}
+
+.featurednews {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    padding-top: 40px;
+}
+
+.featurednews > a {
+    display: block;
+    width: 35%;
+    min-width: 500px;
+}
+
+@media (max-width:768px) {
+    .featurednews {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.featurednews-image {
+    width: 35%;
+    min-width: 500px;
+    height: auto;
+    min-height: 350px;
+    margin-left: 30px;
+    border-radius: 10px;
+    object-fit: cover; /* no distortion */
+}
+
+.featurednews-author {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;   
+    padding-top: 20px;
+}
+
+.author-profile {
+    width: 35px;
+    height: 35px;
+    border-radius: 30px;
+    background-color: rgba(217, 217, 217, 1);
+}
+
+.news-content {
+    width: 60%;
+    max-width: 1000px;
+    height: auto;
+    padding-left: 30px;
+}
+
+@media (max-width:768px) {
+    .news-content {
+        width: 90%;
+        padding-left: 25px;
+    }
+}
+
+.news-content p {
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+.news-content h1 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 40px;
+    font-weight: 800;
+    padding-right: 5px;
+}
+
+.news-content h5 {
+    padding: 15px 10px;
+    font-size: 20px;
+    font-weight: 200;
+    padding-left: 0;
+}
+
+h4 {
+    margin-top: 30px;
+    margin-left: 25px;
+    font-size: 30px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+
+.search-filter-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 0 30px;
+}
+
+.search {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    width: 50%;
+    height: 45px;
+    background-color: rgba(217, 217, 217, 1);
+    border-radius: 50px;
+}
+
+.search img {
+    margin-left: 15px;
+    width: 35px;
+    height: 35px;
+}
+
+.search input {
+    background: none;
+    width: 50%;
+    height: 30px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+
+.news-filter {
+    background: rgba(255, 236, 64, 1);
+    width: 10%;
+    min-width: 150px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.news-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    margin: 20px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 75px;
+    padding-left: 30px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    flex-wrap: nowrap;
+    white-space: nowrap; 
+}
+
+.news-card {
+    text-align: center;
+    width: 20%;
+    min-width: 350px;
+    height: auto;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(238, 238, 238, 1);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    flex: 0 0 350px;
+    white-space: normal;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-card img {
+    width: 305px;
+    height: 305px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.news-card h6 {
+    font-size: 25px;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.news-card p {
+    font-size: 12px;
+    text-align: justify;
+}
+
+.news-company {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.news-company p {
+    font-size: 15px;
+}
+
+.ellipse {
+    width: 5px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: rgba(57, 57, 57, 1);
+}
+
+.author-category-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.author-category-section a {
+    text-decoration: none;
+}
+
+.category-container {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.category-pill {
+    background-color: rgba(116, 114, 114, 1);
+    padding: 4px 12px;
+    border-radius: 50px;
+    color: white;
+    font-size: 11px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #1C5186;
+    margin-top: 75px;
+    height: 75px;
+    position: fixed;  
+    bottom: 0;  
+    left: 0;  
+    width: 100%;
+    z-index: 100; 
+}
+
+.footer footer {
+    color: white;
+    text-align: right;
+    padding-right: 25px;
+    padding-top: 30px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    font-size: 32px;
+    cursor: pointer;
+    user-select: none;
+    margin-right: 30px;
+    position: absolute;
+    right: 0%;
+    top: 20px;
+    color: white;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 75px;
+    right: 20px;
+    width: 150px;
+    background: white;
+    border-radius: 5px;
+    padding: 10px 0;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 99;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    text-align: center;
+    font-weight: 501;
+}
+
+.dropdown-menu a:hover {
+    background: #e0eefc;
+}
+
+#menu-toggle:checked~.dropdown-menu {
+    display: block;
+}
+
+.category-pill.active {
+  background-color: #000;
+  color: #fff;
+}
